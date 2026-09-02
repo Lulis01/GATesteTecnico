@@ -1,0 +1,39 @@
+-- Tabela Clientes
+CREATE TABLE Clientes (
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	Nome NVARCHAR(100) NOT NULL,
+	CPF NVARCHAR(11) NOT NULL UNIQUE,
+	Telefone NVARCHAR(11),
+	Email NVARCHAR(100),
+	DataCadastro DATETIME NOT NULL,
+	DataUpdate DATETIME
+)
+
+-- Tabela Ferramentas (Itens)
+CREATE TABLE Ferramentas (
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	Nome NVARCHAR(100) NOT NULL,
+	Categoria NVARCHAR(30) NOT NULL,
+	ValorDiária DECIMAL(10,2) NOT NULL,
+	Status NVARCHAR(20) NOT NULL,
+	DataCadastro DATETIME NOT NULL,
+	DataUpdate DATETIME
+)
+
+-- Tabela Locacao
+CREATE TABLE Locacao (
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	ClienteId INT NOT NULL,
+	ItemId INT NOT NULL,
+	ClienteNome NVARCHAR(100) NOT NULL,
+	ItemNome NVARCHAR(100) NOT NULL,
+	DataRetirada DATETIME NOT NULL,
+	DataPrevistaDevolucao DATETIME NOT NULL,
+	DataDevolucao DATETIME,
+	ValorTotal DECIMAL(10,2) NOT NULL,
+	Status INT NOT NULL,
+	DataCadastro DATETIME NOT NULL,
+	DataUpdate DATETIME,
+	FOREIGN KEY (ClienteId) REFERENCES Clientes(Id),
+	FOREIGN KEY (ItemId) REFERENCES Ferramentas(Id)
+)
