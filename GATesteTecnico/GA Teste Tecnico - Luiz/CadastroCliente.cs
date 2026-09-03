@@ -16,15 +16,6 @@ namespace GATesteTecnico
         private int clienteId = 0;
 
 
-
-        
-
-
-        
-        
-        
-        
-        
         public CadastroCliente(Clientes tela, int id = 0)
         {
             InitializeComponent();
