@@ -21,8 +21,7 @@ namespace GATesteTecnico.Modelo
 
         public StatusItem Status { get; set; }
 
-        public DateTime DataCadastro { get; set; }
-        public Nullable<DateTime> DataUpdate { get; set; }
+       
     }
 }
 

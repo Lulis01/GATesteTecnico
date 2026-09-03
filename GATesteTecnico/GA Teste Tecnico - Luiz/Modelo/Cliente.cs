@@ -14,8 +14,7 @@ namespace GATesteTecnico.Modelo
 
         public string Email { get; set; }
 
-        public DateTime DataCadastro { get; set; }
-        public Nullable<DateTime> DataUpdate { get; set; }
+     
     }
 }
 

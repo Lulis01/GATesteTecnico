@@ -32,13 +32,15 @@ namespace GATesteTecnico
                     dgvLocacoesFinalizadas.Columns[4].HeaderText = "Item";
                     dgvLocacoesFinalizadas.Columns[5].HeaderText = "Data Retirada";
                     dgvLocacoesFinalizadas.Columns[6].HeaderText = "Data Prev. Devolução";
-                    dgvLocacoesFinalizadas.Columns[7].HeaderText = "Valor Total";
-                    dgvLocacoesFinalizadas.Columns[8].Visible = false; // <---- Status
+                    dgvLocacoesFinalizadas.Columns[7].HeaderText = "Data Devolução";
+                    dgvLocacoesFinalizadas.Columns[8].HeaderText = "Valor Total";
+                    dgvLocacoesFinalizadas.Columns[9].Visible = false; // Status
 
                     dgvLocacoesFinalizadas.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
                     dgvLocacoesFinalizadas.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                    dgvLocacoesFinalizadas.Columns[7].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
 
-                    dgvLocacoesFinalizadas.Columns[7].DefaultCellStyle.Format = "C2";
+                    dgvLocacoesFinalizadas.Columns[8].DefaultCellStyle.Format = "C2";
                 }
             }
             catch (Exception ex)

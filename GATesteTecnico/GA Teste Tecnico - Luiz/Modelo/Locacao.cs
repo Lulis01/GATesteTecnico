@@ -26,8 +26,7 @@ namespace GATesteTecnico.Modelo
         // Status: 0 = Ativa, 1 = Finalizada
         public int Status { get; set; } // 0 = Ativa, 1 = Finalizada
 
-        public DateTime DataCadastro { get; set; }
-        public Nullable<DateTime> DataUpdate { get; set; }
+        
     }
 }
 
