@@ -24,7 +24,6 @@ namespace GATesteTecnico
             {
                 dgvLocacoes.DataSource = LocacaoDataAccess.PegarLocacoesAtivas();
 
-                // Configurar colunas
                 if (dgvLocacoes.Columns.Count > 0)
                 {
                     dgvLocacoes.Columns[0].HeaderText = "Id";
@@ -36,11 +35,9 @@ namespace GATesteTecnico
                     dgvLocacoes.Columns[6].HeaderText = "Data Prev. Devolução";
                     dgvLocacoes.Columns[7].HeaderText = "Valor Total";
 
-                    // Formatar datas
                     dgvLocacoes.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
                     dgvLocacoes.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
 
-                    // Formatar valor
                     dgvLocacoes.Columns[7].DefaultCellStyle.Format = "C2";
                 }
             }
@@ -66,7 +63,6 @@ namespace GATesteTecnico
 
             int id = (int)dgvLocacoes.SelectedRows[0].Cells[0].Value;
 
-            // Finalizar locação na data/hora atual
             if (LocacaoDataAccess.FinalizarLocacao(id, DateTime.Now))
             {
                 MessageBox.Show("Locação finalizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

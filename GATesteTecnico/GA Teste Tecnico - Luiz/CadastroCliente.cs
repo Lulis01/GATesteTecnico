@@ -1,9 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
 using GATesteTecnico.Banco;
 using GATesteTecnico.Modelo;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlServerCe;
+using System.IO;
+using System.Text;
+using System.Windows.Forms;
 
 namespace GATesteTecnico
 {
@@ -13,6 +15,16 @@ namespace GATesteTecnico
         private Cliente cliente;
         private int clienteId = 0;
 
+
+
+        
+
+
+        
+        
+        
+        
+        
         public CadastroCliente(Clientes tela, int id = 0)
         {
             InitializeComponent();
@@ -47,16 +59,16 @@ namespace GATesteTecnico
 
             Cliente novoCliente;
 
-            if (cliente != null)
+            if(cliente != null)
             {
                 novoCliente = cliente;
-                novoCliente.DataUpdate = DateTime.Now;
             }
             else
             {
                 novoCliente = new Cliente();
-                novoCliente.DataCadastro = DateTime.Now;
             }
+
+    
 
             novoCliente.Nome = txtNome.Text.Trim();
             novoCliente.CPF = txtCPF.Text.Trim().Replace(".", "").Replace("-", "");
@@ -69,6 +81,7 @@ namespace GATesteTecnico
             {
                 resultado = ClienteDataAccess.AtualizarCliente(novoCliente);
             }
+            
             else
             {
                 resultado = ClienteDataAccess.SalvarCliente(novoCliente);
@@ -82,7 +95,7 @@ namespace GATesteTecnico
             }
             else
             {
-                lblErros.Text = "Erro ao salvar cliente no banco de dados.";
+                lblErros.Text = "CPF Já Cadastrado.";
             }
         }
 

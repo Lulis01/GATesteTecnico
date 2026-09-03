@@ -23,7 +23,6 @@ namespace GATesteTecnico
             {
                 dgvClientes.DataSource = ClienteDataAccess.PegarClientes();
 
-                // Configurar colunas
                 if (dgvClientes.Columns.Count > 0)
                 {
                     dgvClientes.Columns[0].HeaderText = "Id";
@@ -31,8 +30,6 @@ namespace GATesteTecnico
                     dgvClientes.Columns[2].HeaderText = "CPF";
                     dgvClientes.Columns[3].HeaderText = "Telefone";
                     dgvClientes.Columns[4].HeaderText = "Email";
-                    dgvClientes.Columns[5].Visible = false; // DataCadastro
-                    dgvClientes.Columns[6].Visible = false; // DataUpdate
                 }
             }
             catch (Exception ex)

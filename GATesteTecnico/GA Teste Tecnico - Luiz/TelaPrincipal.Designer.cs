@@ -20,9 +20,9 @@ namespace GATesteTecnico
             this.btnLocacao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
+            
             // btnClientes
-            // 
+            
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.Location = new System.Drawing.Point(150, 100);
             this.btnClientes.Name = "btnClientes";
@@ -31,9 +31,9 @@ namespace GATesteTecnico
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
+            
             // btnItens
-            // 
+            
             this.btnItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItens.Location = new System.Drawing.Point(150, 170);
             this.btnItens.Name = "btnItens";
@@ -42,9 +42,9 @@ namespace GATesteTecnico
             this.btnItens.Text = "Itens";
             this.btnItens.UseVisualStyleBackColor = true;
             this.btnItens.Click += new System.EventHandler(this.btnItens_Click);
-            // 
+            
             // btnLocacao
-            // 
+            
             this.btnLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocacao.Location = new System.Drawing.Point(150, 240);
             this.btnLocacao.Name = "btnLocacao";
@@ -53,9 +53,9 @@ namespace GATesteTecnico
             this.btnLocacao.Text = "Locação";
             this.btnLocacao.UseVisualStyleBackColor = true;
             this.btnLocacao.Click += new System.EventHandler(this.btnLocacao_Click);
-            // 
+            
             // label1
-            // 
+            
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(80, 30);
@@ -63,9 +63,9 @@ namespace GATesteTecnico
             this.label1.Size = new System.Drawing.Size(490, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sistema de Locação de Ferramentas";
-            // 
+            
             // TelaPrincipal
-            // 
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 350);

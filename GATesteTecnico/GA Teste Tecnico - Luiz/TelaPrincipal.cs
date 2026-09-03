@@ -12,7 +12,7 @@ namespace GATesteTecnico
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
         {
-            // Configurações iniciais se necessário
+
         }
 
         private void btnClientes_Click(object sender, EventArgs e)

@@ -23,7 +23,6 @@ namespace GATesteTecnico
             {
                 dgvItens.DataSource = ItemDataAccess.PegarItens();
 
-                // Configurar colunas
                 if (dgvItens.Columns.Count > 0)
                 {
                     dgvItens.Columns[0].HeaderText = "Id";
@@ -31,10 +30,6 @@ namespace GATesteTecnico
                     dgvItens.Columns[2].HeaderText = "Categoria";
                     dgvItens.Columns[3].HeaderText = "Valor Diária";
                     dgvItens.Columns[4].HeaderText = "Status";
-                    dgvItens.Columns[5].Visible = false; // DataCadastro
-                    dgvItens.Columns[6].Visible = false; // DataUpdate
-
-                    // Formatar coluna de valor
                     dgvItens.Columns[3].DefaultCellStyle.Format = "C2";
                 }
             }

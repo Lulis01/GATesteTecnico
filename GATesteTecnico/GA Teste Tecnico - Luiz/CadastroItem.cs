@@ -58,16 +58,16 @@ namespace GATesteTecnico
 
             Item novoItem;
 
-            if (item != null)
+            if (item   !=null)
             {
                 novoItem = item;
-                novoItem.DataUpdate = DateTime.Now;
             }
             else
             {
                 novoItem = new Item();
-                novoItem.DataCadastro = DateTime.Now;
             }
+
+
 
             novoItem.Nome = txtNome.Text.Trim();
 

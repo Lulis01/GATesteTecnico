@@ -69,7 +69,7 @@ namespace GATesteTecnico.Banco
             return cliente;
         }
 
-        public static bool CPFJaExiste(string cpf, int idExcluir = 0)
+         public static bool CPFJaExiste(string cpf, int idExcluir = 0)
         {
             string cpfLimpo = cpf.Replace(".", "").Replace("-", "");
             string sql = "SELECT COUNT(*) FROM [Cliente] WHERE CPF = @CPF AND Id != @Id";
