@@ -5,8 +5,7 @@ CREATE TABLE Clientes (
 	CPF NVARCHAR(11) NOT NULL UNIQUE,
 	Telefone NVARCHAR(11),
 	Email NVARCHAR(100),
-	DataCadastro DATETIME NOT NULL,
-	DataUpdate DATETIME
+	
 )
 
 -- Tabela Ferramentas (Itens)
@@ -16,8 +15,7 @@ CREATE TABLE Ferramentas (
 	Categoria NVARCHAR(30) NOT NULL,
 	ValorDiária DECIMAL(10,2) NOT NULL,
 	Status NVARCHAR(20) NOT NULL,
-	DataCadastro DATETIME NOT NULL,
-	DataUpdate DATETIME
+	
 )
 
 -- Tabela Locacao
@@ -32,8 +30,7 @@ CREATE TABLE Locacao (
 	DataDevolucao DATETIME,
 	ValorTotal DECIMAL(10,2) NOT NULL,
 	Status INT NOT NULL,
-	DataCadastro DATETIME NOT NULL,
-	DataUpdate DATETIME,
+	
 	FOREIGN KEY (ClienteId) REFERENCES Clientes(Id),
 	FOREIGN KEY (ItemId) REFERENCES Ferramentas(Id)
 )
