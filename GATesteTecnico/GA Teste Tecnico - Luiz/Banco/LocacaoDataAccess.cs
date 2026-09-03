@@ -128,6 +128,14 @@ namespace GATesteTecnico.Banco
                 return false;
             }
 
+            const decimal MultaAtraso = 100m;
+
+            int diasAtraso = (dataDevolucao.Date - locacao.DataPrevistaDevolucao.Date).Days;
+            if (diasAtraso > 0)
+            {
+                locacao.ValorTotal += MultaAtraso * diasAtraso;
+            }
+
             string sql = "UPDATE [Locacao] SET DataDevolucao = @DataDevolucao WHERE Id = @Id";
 
             using (SqlCeConnection con = new SqlCeConnection(GetConnectionString()))
