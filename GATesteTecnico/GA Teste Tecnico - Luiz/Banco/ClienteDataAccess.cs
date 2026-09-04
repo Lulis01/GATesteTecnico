@@ -33,7 +33,8 @@ namespace GATesteTecnico.Banco
                         c.Nome = resposta.GetString(resposta.GetOrdinal("Nome"));
                         c.CPF = resposta.GetString(resposta.GetOrdinal("CPF"));
                         c.Telefone = resposta.IsDBNull(resposta.GetOrdinal("Telefone")) ? null : resposta.GetString(resposta.GetOrdinal("Telefone"));
-                        
+                        c.Email = resposta.IsDBNull(resposta.GetOrdinal("Email")) ? null : resposta.GetString(resposta.GetOrdinal("Email"));
+
                         clientes.Add(c);
                     }
                 }
